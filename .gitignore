@@ -1,20 +1,108 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
+*.so
+
+# Distribution / packaging
 *.egg-info/
+*.egg
+.eggs/
 dist/
 build/
-.eggs/
-*.egg
-.coverage
-htmlcov/
-.mypy_cache/
-.pytest_cache/
-.ruff_cache/
-*.so
-.env
-*.pyc
+wheels/
+
+# Virtual environments
 .venv/
-.coverage
-*.egg-info/
+venv/
+env/
+ENV/
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Hypothesis
 .hypothesis/
+
+# ---------- SECURITY-SENSITIVE ----------
+
+# Environment and secret files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+*.keystore
+
+# Cloud provider credentials
+credentials.json
+service-account*.json
+*-credentials.json
+.oci/
+.aws/
+.gcp/
+
+# API keys / tokens (catch accidentally saved files)
+*secret*
+!SECURITY.md
+*token*.json
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.sql.bak
+
+# Model weights (large files that should use Git LFS or external storage)
+*.bin
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.onnx
+*.h5
+
+# ChromaDB local data
+chroma_data/
+chromadb_data/
+
+# Terraform / infrastructure state (contains secrets)
+*.tfstate
+*.tfstate.backup
+.terraform/
+
+# Docker secrets
+docker-compose.override.yml
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Coverage and test artifacts
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# mypy / ruff cache
+.mypy_cache/
+.ruff_cache/
+
+# pytest cache
+.pytest_cache/
+
+# Logs (may contain sensitive request/response data)
+*.log
+logs/

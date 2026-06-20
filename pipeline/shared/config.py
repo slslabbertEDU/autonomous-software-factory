@@ -19,12 +19,12 @@ class LLMConfig(BaseModel):
     # Primary coder model (Qwen3-Coder-30B-A3B-AWQ on A10)
     coder_endpoint: str = "http://localhost:8000/v1"
     coder_model: str = "Qwen/Qwen3-Coder-30B-A3B-AWQ"
-    coder_api_key: str = "not-needed"
+    coder_api_key: str = Field(default="", description="Set via ASF_LLM__CODER_API_KEY env var")
 
     # Reasoning model (DeepSeek-R1-Distill-Qwen-32B on A100)
     reasoning_endpoint: str = "http://localhost:8001/v1"
     reasoning_model: str = "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B"
-    reasoning_api_key: str = "not-needed"
+    reasoning_api_key: str = Field(default="", description="Set via ASF_LLM__REASONING_API_KEY env var")
 
     # Token budgets
     default_max_tokens: int = 4096

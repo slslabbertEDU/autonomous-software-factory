@@ -28,8 +28,11 @@ The A10's 24GB VRAM is the minimum viable configuration. At 16-bit (FP16), the m
 vllm serve Qwen/Qwen3-Coder-30B-A3B-AWQ \
   --quantization awq \
   --max-model-len 32768 \
-  --gpu-memory-utilization 0.95
+  --gpu-memory-utilization 0.95 \
+  --api-key "${VLLM_API_KEY}"
 ```
+
+> **Security note:** The `--api-key` flag is required. Without it, the inference endpoint is unauthenticated and accessible to anyone with network access. The key is loaded from the `VLLM_API_KEY` environment variable — never hardcoded.
 
 **Why persistent:** Module generation (Months 3-4) requires sustained inference throughput for 50 generation runs. On-demand provisioning introduces cold-start latency incompatible with the pipeline's Temporal workflow timeouts.
 
@@ -55,7 +58,8 @@ The A100 40GB is the minimum viable configuration. This model is invoked once pe
 vllm serve deepseek-ai/DeepSeek-R1-Distill-Qwen-32B \
   --quantization awq \
   --max-model-len 32768 \
-  --gpu-memory-utilization 0.95
+  --gpu-memory-utilization 0.95 \
+  --api-key "${VLLM_API_KEY}"
 ```
 
 **Why on-demand:** The reasoning model runs infrequently. Persistent allocation would be wasteful. On-demand provisioning via Temporal activity with a startup timeout is sufficient.

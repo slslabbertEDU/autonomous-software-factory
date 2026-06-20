@@ -1,0 +1,22 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-06-20",
+  "policy": "All dependencies pinned to exact versions. No carets. No tildes. No ranges. AI agent may not add dependencies not listed here. Upgrades run in isolated sandbox jobs only.",
+  "python": {
+    "temporalio": { "version": "1.7.1", "approved_at": "2026-06-20", "purpose": "Durable workflow orchestration" },
+    "fastapi": { "version": "0.115.6", "approved_at": "2026-06-20", "purpose": "API framework for agent endpoints" },
+    "sqlalchemy": { "version": "2.0.36", "approved_at": "2026-06-20", "purpose": "Database ORM" },
+    "pydantic": { "version": "2.10.3", "approved_at": "2026-06-20", "purpose": "Data validation and settings" },
+    "chromadb": { "version": "0.6.3", "approved_at": "2026-06-20", "purpose": "Vector database for RAG" },
+    "openai": { "version": "1.58.1", "approved_at": "2026-06-20", "purpose": "vLLM OpenAI-compatible client" },
+    "z3-solver": { "version": "4.13.4.0", "approved_at": "2026-06-20", "purpose": "Formal verification" },
+    "hypothesis": { "version": "6.123.1", "approved_at": "2026-06-20", "purpose": "Property-based testing" },
+    "pytest": { "version": "8.3.4", "approved_at": "2026-06-20", "purpose": "Test runner" },
+    "pytest-cov": { "version": "6.0.0", "approved_at": "2026-06-20", "purpose": "Coverage reporting" },
+    "mypy": { "version": "1.13.0", "approved_at": "2026-06-20", "purpose": "Static type checking" },
+    "ruff": { "version": "0.8.4", "approved_at": "2026-06-20", "purpose": "Linting" },
+    "bandit": { "version": "1.8.0", "approved_at": "2026-06-20", "purpose": "Security scanning" },
+    "prometheus-client": { "version": "0.21.1", "approved_at": "2026-06-20", "purpose": "Metrics export" },
+    "gitpython": { "version": "3.1.43", "approved_at": "2026-06-20", "purpose": "Repository management" }
+  }
+}
